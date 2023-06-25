@@ -1,0 +1,14 @@
+def factorial(n):
+    if not isinstance(n, int) or n < 0:
+        raise ValueError("Invalid input. Expected a non-negative integer.")
+
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+try:
+    result = factorial(5)
+    print(result)
+except ValueError as e:
+    print(str(e))
